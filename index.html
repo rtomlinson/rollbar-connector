@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Rollbar-connector by rtomlinson</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/rtomlinson/rollbar-connector">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/rtomlinson/rollbar-connector/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/rtomlinson/rollbar-connector/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Rollbar-connector</h1>
+          <p>Mule connector for Rollbar</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/rtomlinson">rtomlinson</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="mule-rollbar-connector" class="anchor" href="#mule-rollbar-connector"><span class="octicon octicon-link"></span></a>Mule Rollbar Connector</h1>
+
+<p><strong>WARNING</strong> This connector is still very much in the early stages of development, as such functionaly is liable to change in a non-backwards compatable manor.</p>
+
+<h2>
+<a name="build" class="anchor" href="#build"><span class="octicon octicon-link"></span></a>Build</h2>
+
+<ul>
+<li>If using MuleStudio without Maven</li>
+</ul><pre><code>mvn clean package
+</code></pre>
+
+<ul>
+<li>If you are using Maven</li>
+</ul><pre><code>mvn clean install
+</code></pre>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<ul>
+<li>In MuleStudio goto Help &gt; Install New Software...</li>
+<li>Click Add...</li>
+<li>Click Local...</li>
+<li>Add the mule-module-rollbar/target/update-site path</li>
+<li>Give the repository a name and click ok</li>
+<li>Install Rollbar</li>
+</ul><p>Additional dependency if using Maven:</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>net.rstomlinson.mule<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>mule-module-rollbar<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>For information about usage you can check out the documentation at <a href="http://rtomlinson.github.com/rollbar-connector">http://rtomlinson.github.com/rollbar-connector</a></p>
+
+<h2>
+<a name="reporting-issues" class="anchor" href="#reporting-issues"><span class="octicon octicon-link"></span></a>Reporting Issues</h2>
+
+<p>You can report new issues at <a href="https://github.com/rtomlinson/rollbar-connector/issues">https://github.com/rtomlinson/rollbar-connector/issues</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
