@@ -1,6 +1,5 @@
-
 # Mule Rollbar Connector
-**WARNING** This connector is still very much in the early stages of development, as such functionaly is liable to change in a non-backwards compatable manor.
+**WARNING** This connector is still very much in the early stages of development, as such functionaly is liable to change in a non-backwards compatable manner.
 
 ## Build
 * If using MuleStudio without Maven
