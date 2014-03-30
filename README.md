@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rtomlinson/rollbar-connector.svg?branch=master)](https://travis-ci.org/rtomlinson/rollbar-connector)
+
 # Mule Rollbar Connector
 **WARNING** This connector is still very much in the early stages of development, as such functionaly is liable to change in a non-backwards compatable manner.
 
