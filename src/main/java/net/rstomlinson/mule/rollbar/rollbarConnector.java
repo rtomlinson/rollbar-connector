@@ -7,6 +7,7 @@ import net.rstomlinson.mule.rollbar.entities.*;
 
 import org.mule.api.annotations.Connector;
 import org.mule.api.annotations.display.Password;
+import org.mule.api.annotations.display.Placement;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.api.annotations.Configurable;
@@ -34,6 +35,7 @@ public class rollbarConnector
     @Configurable
     @Optional
     @Default("https://api.rollbar.com/api/1/item/")
+    @Placement(group="Credentials")
     //@RestUriParam(value = "endpoint")
     private String endpoint;
     
@@ -42,12 +44,14 @@ public class rollbarConnector
      */
     @Configurable
     @Password
+    @Placement(group="Credentials")
     private String accessToken;
 
 	/**
      * Rollbar environment
      */
     @Configurable
+    @Placement(group="Settings")
     private String environment;
     
     /**
@@ -55,13 +59,15 @@ public class rollbarConnector
      */
     @Configurable
     @Optional
+    @Placement(group="Settings")
     private String platform;
     
     /**
-     * Lanugage
+     * Language
      */
     @Configurable
     @Optional
+    @Placement(group="Settings")
     private String language;
     
     /**
@@ -69,6 +75,7 @@ public class rollbarConnector
      */
     @Configurable
     @Optional
+    @Placement(group="Settings")
     private String Framework;
     
     /**
@@ -177,36 +184,26 @@ public class rollbarConnector
 	*
 	* {@sample.xml ../../../doc/rollbar-connector.xml.sample rollbar:message-item}
 	* 
-    * @param messageContent message content
+    * @param message message content
     * @param severityLevel message severity
     * @param context message context
     * @param fingerprint item fingerprint
     * @param title item title
-    * @param personEmail person email
-    * @param personId person id
-    * @param personUsername person username
-    * @param serverBranch server branch
-    * @param serverHost server host
-    * @param serverRoot server root
-    * @param serverSHA server SHA
-    * @return Some string
- * @throws IOException IOexception
- * @throws JsonMappingException  JSON mapping exception
- * @throws JsonGenerationException  JSON generator exception
+    * @param person person details
+    * @param server server details
+    * @return Rollbar response
+    * @throws IOException IOexception
+    * @throws JsonMappingException  JSON mapping exception
+    * @throws JsonGenerationException  JSON generator exception
     */
     @Processor
-    public Response messageItem(String messageContent, 
-    						  @Optional SeverityLevel severityLevel,
-    						  @Optional String context,
-    						  @Optional String fingerprint,
-    						  @Optional String title,
-    						  @Optional String personEmail,
-    						  @Optional String personId,
-    						  @Optional String personUsername,
-    						  @Optional String serverBranch,
-    						  @Optional String serverHost,
-    						  @Optional String serverRoot,
-    						  @Optional String serverSHA) throws JsonGenerationException, JsonMappingException, IOException
+    public Response messageItem(@Placement(group="Message",order=1) Message message, 
+    							@Placement(group="Message",order=2)@Optional SeverityLevel severityLevel,
+    							@Placement(group="Extra Info", order=3)@Optional String context,
+    							@Placement(group="Extra Info", order=4)@Optional String fingerprint,
+    							@Placement(group="Extra Info", order=5)@Optional String title,
+    						    @Placement(group="Person", order=6)@Optional Person person,
+    						    @Placement(group="Server",order=7)@Optional Server server) throws JsonGenerationException, JsonMappingException, IOException
     {
     	
     	Item item = new Item();
@@ -224,34 +221,19 @@ public class rollbarConnector
     	data.setTitle(title);
     	
     	Body body = new Body();
-    	Message message = new Message();
-    	
-    	message.setBody(messageContent);
     	body.setMessage(message);
     	
     	data.setBody(body);
     	
-    	Person person = new Person();
-    	person.setEmail(personEmail);
-    	person.setId(personId);
-    	person.setUsername(personUsername);
+    	data.setPerson(person);
     	
-    	//data.setPerson(person);
-    	
-    	Server server = new Server();
-    	server.setBranch(serverBranch);
-    	server.setHost(serverHost);
-    	server.setRoot(serverRoot);
-    	server.setSha(serverSHA);
-    	
-    	//data.setServer(server);
+    	data.setServer(server);
     	
     	Notifier notifier = new Notifier();
     	
     	data.setNotifier(notifier);
     	
     	item.setData(data);
-    	
     	
     	ObjectMapper mapper = new ObjectMapper();
     	
@@ -264,6 +246,11 @@ public class rollbarConnector
     	ClientResponse response = webResource.type("application/json").post(ClientResponse.class, json);
     	
     	int status = response.getStatus();
+    	
+    	// If error occurred, throw exception
+    	if(status >= 400){
+    		// TODO
+    	}
     	
     	Response responseObj = mapper.readValue(response.getEntity(String.class), Response.class);
     	
