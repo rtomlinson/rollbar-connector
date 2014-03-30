@@ -240,7 +240,7 @@ Summary:
           <th>Schema Version</th><td>1.0-SNAPSHOT</td>
         </tr>
 <tr>
-          <th>Minimum Mule Version</th><td>3.2</td>
+          <th>Minimum Mule Version</th><td>3.4.0</td>
         </tr>
     </tbody></table>
   </div>
@@ -414,7 +414,7 @@ specify which configuration to use.</p>
           xs:string</nobr></td>
           <td class="jd-linkcol"><nobr>language</nobr></td>
           <td class="jd-descrcol"></td>
-          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Lanugage
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Language
 </td>
           <td class="jd-descrcol"></td>
           <td class="jd-descrcol"></td>
@@ -475,7 +475,9 @@ specify which configuration to use.</p>
       
   <div class="jd-tagdata jd-tagdescr"><p>Message item
 
- <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>INCLUDE_ERROR</pre></div></p></div>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;rollbar:message-item&gt;
+	&lt;rollbar:message body="#[payload]"/&gt;
+&lt;/rollbar:message-item&gt;</pre></div></p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Attributes</h5>
 
@@ -493,12 +495,12 @@ specify which configuration to use.</p>
           
                 
                     <tr class=" api apilevel-" >
-                        <td class="jd-linkcol"><nobr>messageContent</nobr></td>
+                        <td class="jd-linkcol"><nobr>message</nobr></td>
                         <td class="jd-descrcol"></td>
                         <td class="jd-descrcol">Message content</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+                        <td class="jd-descrcol"><a href="../java/net/rstomlinson/mule/rollbar/entities/Message.html">Message</a></td>
                         <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
+                        <td class="jd-descrcol"></td>
                     </tr>
                 
                 
@@ -553,84 +555,24 @@ specify which configuration to use.</p>
           
                 
                     <tr class="alt-color api apilevel-" >
-                        <td class="jd-linkcol"><nobr>personEmail</nobr></td>
+                        <td class="jd-linkcol"><nobr>person</nobr></td>
                         <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Person email</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Person details</td>
+                        <td class="jd-descrcol"><a href="../java/net/rstomlinson/mule/rollbar/entities/Person.html">Person</a></td>
                         <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
+                        <td class="jd-descrcol"></td>
                     </tr>
                 
                 
           
                 
                     <tr class=" api apilevel-" >
-                        <td class="jd-linkcol"><nobr>personId</nobr></td>
+                        <td class="jd-linkcol"><nobr>server</nobr></td>
                         <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Person id</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Server details</td>
+                        <td class="jd-descrcol"><a href="../java/net/rstomlinson/mule/rollbar/entities/Server.html">Server</a></td>
                         <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
-                    </tr>
-                
-                
-          
-                
-                    <tr class="alt-color api apilevel-" >
-                        <td class="jd-linkcol"><nobr>personUsername</nobr></td>
                         <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Person username</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
-                        <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
-                    </tr>
-                
-                
-          
-                
-                    <tr class=" api apilevel-" >
-                        <td class="jd-linkcol"><nobr>serverBranch</nobr></td>
-                        <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Server branch</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
-                        <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
-                    </tr>
-                
-                
-          
-                
-                    <tr class="alt-color api apilevel-" >
-                        <td class="jd-linkcol"><nobr>serverHost</nobr></td>
-                        <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Server host</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
-                        <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
-                    </tr>
-                
-                
-          
-                
-                    <tr class=" api apilevel-" >
-                        <td class="jd-linkcol"><nobr>serverRoot</nobr></td>
-                        <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Server root</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
-                        <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
-                    </tr>
-                
-                
-          
-                
-                    <tr class="alt-color api apilevel-" >
-                        <td class="jd-linkcol"><nobr>serverSHA</nobr></td>
-                        <td class="jd-descrcol"></td>
-                        <td class="jd-descrcol"><i>Optional.&nbsp;</i>Server SHA</td>
-                        <td class="jd-descrcol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
-                        <td class="jd-descrcol">*/*</td>
-                        <td class="jd-descrcol">UTF-8</td>
                     </tr>
                 
                 
@@ -650,7 +592,7 @@ specify which configuration to use.</p>
              </tr>
              <tr>
                 <td class="jd-descrcol"><a href="../java/net/rstomlinson/mule/rollbar/entities/Response.html">Response</a></td>
-                <td class="jd-descrcol">Some string</td>
+                <td class="jd-descrcol">Rollbar response</td>
              </tr>
          </table>
   </div>

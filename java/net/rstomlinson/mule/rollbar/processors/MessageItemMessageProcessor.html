@@ -223,6 +223,8 @@
     <li class="api apilevel-">
   <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/package-summary.html">net.rstomlinson.mule.rollbar.entities</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/holders/package-summary.html">net.rstomlinson.mule.rollbar.entities.holders</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/transformers/package-summary.html">net.rstomlinson.mule.rollbar.entities.transformers</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/net/rstomlinson/mule/rollbar/oauth/package-summary.html">net.rstomlinson.mule.rollbar.oauth</a></li>
@@ -366,6 +368,23 @@
   
   
 
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+  
+  
+  
+
 
 <div class="sum-details-links">
 
@@ -455,6 +474,8 @@ Summary:
       
         MessageProcessor 
       
+        OperationMetaDataEnabled 
+      
   
   
 
@@ -515,7 +536,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>MessageItemMessageProcessor invokes the <code><a href="../../../../../../java/net/rstomlinson/mule/rollbar/rollbarConnector.html#messageItem(java.lang.String, net.rstomlinson.mule.rollbar.entities.SeverityLevel, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">messageItem(java.lang.String, net.rstomlinson.mule.rollbar.entities.SeverityLevel, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../../java/net/rstomlinson/mule/rollbar/rollbarConnector.html">rollbarConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+<p>MessageItemMessageProcessor invokes the <code><a href="../../../../../../java/net/rstomlinson/mule/rollbar/rollbarConnector.html#messageItem(net.rstomlinson.mule.rollbar.entities.Message, net.rstomlinson.mule.rollbar.entities.SeverityLevel, java.lang.String, java.lang.String, java.lang.String, net.rstomlinson.mule.rollbar.entities.Person, net.rstomlinson.mule.rollbar.entities.Server)">messageItem(net.rstomlinson.mule.rollbar.entities.Message, net.rstomlinson.mule.rollbar.entities.SeverityLevel, java.lang.String, java.lang.String, java.lang.String, net.rstomlinson.mule.rollbar.entities.Person, net.rstomlinson.mule.rollbar.entities.Server)</a></code> method in <code><a href="../../../../../../java/net/rstomlinson/mule/rollbar/rollbarConnector.html">rollbarConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  
 </p>
 
@@ -701,6 +722,12 @@ org.mule.api.lifecycle.Stoppable
 
 
 
+
+
+
+
+
+
 </table>
 
 
@@ -738,8 +765,8 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_messageContentType">_messageContentType</a></td>
+          <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Message.html">Message</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_messageType">_messageType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -749,8 +776,8 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_personEmailType">_personEmailType</a></td>
+          <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Person.html">Person</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_personType">_personType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -760,68 +787,13 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_personIdType">_personIdType</a></td>
+          <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Server.html">Server</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_serverType">_serverType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
     
       <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_personUsernameType">_personUsernameType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_serverBranchType">_serverBranchType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_serverHostType">_serverHostType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_serverRootType">_serverRootType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#_serverSHAType">_serverSHAType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
@@ -832,7 +804,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
@@ -843,7 +815,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
@@ -854,7 +826,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
@@ -865,24 +837,13 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#messageContent">messageContent</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
       <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           protected
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#personEmail">personEmail</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#message">message</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -893,7 +854,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#personId">personId</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#person">person</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -904,51 +865,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#personUsername">personUsername</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#serverBranch">serverBranch</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#serverHost">serverHost</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#serverRoot">serverRoot</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#serverSHA">serverSHA</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#server">server</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -1068,6 +985,12 @@ org.mule.api.lifecycle.Stoppable
 
 
 
+
+
+
+
+
+
 </table>
 
 
@@ -1119,6 +1042,38 @@ org.mule.api.lifecycle.Stoppable
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#dispose()">dispose</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Result&lt;MetaData&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#getInputMetaData()">getInputMetaData</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            Result&lt;MetaData&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#getOutputMetaData(org.mule.common.metadata.MetaData)">getOutputMetaData</a></span>(MetaData inputMetadata)</nobr>
         
   </td></tr>
 
@@ -1224,9 +1179,9 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setMessageContent(java.lang.Object)">setMessageContent</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setMessage(java.lang.Object)">setMessage</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
         
-        <div class="jd-descrdiv">Sets messageContent</div>
+        <div class="jd-descrdiv">Sets message</div>
   
   </td></tr>
 
@@ -1260,9 +1215,9 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setPersonEmail(java.lang.Object)">setPersonEmail</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setPerson(java.lang.Object)">setPerson</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
         
-        <div class="jd-descrdiv">Sets personEmail</div>
+        <div class="jd-descrdiv">Sets person</div>
   
   </td></tr>
 
@@ -1278,105 +1233,15 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setPersonId(java.lang.Object)">setPersonId</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setServer(java.lang.Object)">setServer</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
         
-        <div class="jd-descrdiv">Sets personId</div>
+        <div class="jd-descrdiv">Sets server</div>
   
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setPersonUsername(java.lang.Object)">setPersonUsername</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets personUsername</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setServerBranch(java.lang.Object)">setServerBranch</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets serverBranch</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setServerHost(java.lang.Object)">setServerHost</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets serverHost</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setServerRoot(java.lang.Object)">setServerRoot</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets serverRoot</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../net/rstomlinson/mule/rollbar/processors/MessageItemMessageProcessor.html#setServerSHA(java.lang.Object)">setServerSHA</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
-        
-        <div class="jd-descrdiv">Sets serverSHA</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1394,7 +1259,7 @@ org.mule.api.lifecycle.Stoppable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1412,7 +1277,7 @@ org.mule.api.lifecycle.Stoppable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1428,7 +1293,7 @@ org.mule.api.lifecycle.Stoppable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -2335,6 +2200,68 @@ From interface
 </td></tr>
 
 
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.common.metadata.MetaDataDescriptor" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.common.metadata.MetaDataDescriptor-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.common.metadata.MetaDataDescriptor
+
+<div id="inherited-methods-org.mule.common.metadata.MetaDataDescriptor">
+  <div id="inherited-methods-org.mule.common.metadata.MetaDataDescriptor-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.common.metadata.MetaDataDescriptor-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            Result&lt;MetaData&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getInputMetaData</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            Result&lt;MetaData&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getOutputMetaData</span>(MetaData arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
 </table>
 
 
@@ -2427,7 +2354,7 @@ From interface
 
 
 
-<A NAME="_messageContentType"></A>
+<A NAME="_messageType"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2435,9 +2362,9 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Message.html">Message</a>
       </span>
-        _messageContentType
+        _messageType
     </h4>
       <div class="api-level">
         
@@ -2457,7 +2384,7 @@ From interface
 
 
 
-<A NAME="_personEmailType"></A>
+<A NAME="_personType"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2465,9 +2392,9 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Person.html">Person</a>
       </span>
-        _personEmailType
+        _personType
     </h4>
       <div class="api-level">
         
@@ -2487,7 +2414,7 @@ From interface
 
 
 
-<A NAME="_personIdType"></A>
+<A NAME="_serverType"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2495,159 +2422,9 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        <a href="../../../../../../java/net/rstomlinson/mule/rollbar/entities/Server.html">Server</a>
       </span>
-        _personIdType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_personUsernameType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-        _personUsernameType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_serverBranchType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-        _serverBranchType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_serverHostType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-        _serverHostType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_serverRootType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-        _serverRootType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_serverSHAType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-        _serverSHAType
+        _serverType
     </h4>
       <div class="api-level">
         
@@ -2787,7 +2564,7 @@ From interface
 
 
 
-<A NAME="messageContent"></A>
+<A NAME="message"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2797,7 +2574,7 @@ From interface
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
       </span>
-        messageContent
+        message
     </h4>
       <div class="api-level">
         
@@ -2817,7 +2594,7 @@ From interface
 
 
 
-<A NAME="personEmail"></A>
+<A NAME="person"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2827,7 +2604,7 @@ From interface
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
       </span>
-        personEmail
+        person
     </h4>
       <div class="api-level">
         
@@ -2847,7 +2624,7 @@ From interface
 
 
 
-<A NAME="personId"></A>
+<A NAME="server"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2857,157 +2634,7 @@ From interface
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
       </span>
-        personId
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="personUsername"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
-      </span>
-        personUsername
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="serverBranch"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
-      </span>
-        serverBranch
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="serverHost"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
-      </span>
-        serverHost
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="serverRoot"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
-      </span>
-        serverRoot
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="serverSHA"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
-      </span>
-        serverSHA
+        server
     </h4>
       <div class="api-level">
         
@@ -3168,6 +2795,77 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getInputMetaData()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        Result&lt;MetaData&gt;
+      </span>
+      <span class="sympad">getInputMetaData</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getOutputMetaData(org.mule.common.metadata.MetaData)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        Result&lt;MetaData&gt;
+      </span>
+      <span class="sympad">getOutputMetaData</span>
+      <span class="normal">(MetaData inputMetadata)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>inputMetadata</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
@@ -3385,7 +3083,7 @@ From interface
 </div>
 
 
-<A NAME="setMessageContent(java.lang.Object)"></A>
+<A NAME="setMessage(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -3397,7 +3095,7 @@ From interface
          
         void
       </span>
-      <span class="sympad">setMessageContent</span>
+      <span class="sympad">setMessage</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
     </h4>
       <div class="api-level">
@@ -3410,7 +3108,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets messageContent</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets message</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -3467,7 +3165,7 @@ From interface
 </div>
 
 
-<A NAME="setPersonEmail(java.lang.Object)"></A>
+<A NAME="setPerson(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -3479,7 +3177,7 @@ From interface
          
         void
       </span>
-      <span class="sympad">setPersonEmail</span>
+      <span class="sympad">setPerson</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
     </h4>
       <div class="api-level">
@@ -3492,7 +3190,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets personEmail</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets person</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -3508,7 +3206,7 @@ From interface
 </div>
 
 
-<A NAME="setPersonId(java.lang.Object)"></A>
+<A NAME="setServer(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -3520,7 +3218,7 @@ From interface
          
         void
       </span>
-      <span class="sympad">setPersonId</span>
+      <span class="sympad">setServer</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
     </h4>
       <div class="api-level">
@@ -3533,212 +3231,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets personId</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setPersonUsername(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setPersonUsername</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets personUsername</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setServerBranch(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setServerBranch</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets serverBranch</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setServerHost(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setServerHost</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets serverHost</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setServerRoot(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setServerRoot</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets serverRoot</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setServerSHA(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setServerSHA</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets serverSHA</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets server</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">

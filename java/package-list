@@ -8,6 +8,7 @@ net.rstomlinson.mule.rollbar.config
 net.rstomlinson.mule.rollbar.connection
 net.rstomlinson.mule.rollbar.devkit
 net.rstomlinson.mule.rollbar.entities
+net.rstomlinson.mule.rollbar.entities.holders
 net.rstomlinson.mule.rollbar.entities.transformers
 net.rstomlinson.mule.rollbar.oauth
 net.rstomlinson.mule.rollbar.process
