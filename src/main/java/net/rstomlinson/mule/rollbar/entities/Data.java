@@ -10,7 +10,6 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 @JsonPropertyOrder({"environment", "body","level","timestamp", "platform", "language", 
 					"framework", "context", "fingerprint", "title", "notifier"})
 public class Data {
-	
 	@JsonProperty("environment")
 	private String environment;
 	@JsonProperty("body")
@@ -28,8 +27,8 @@ public class Data {
 	@JsonProperty("context")
 	private String context;
 	//private Request request;
-	//private Person person;
-	//private Server server;
+	private Person person;
+	private Server server;
 	//private Client client;
 	//private Custom custom;
 	@JsonProperty("fingerprint")
@@ -119,20 +118,26 @@ public class Data {
 		this.context = context;
 	}
 	
-	/*
+	@JsonProperty("person")
 	public Person getPerson() {
 		return person;
 	}
+	
+	@JsonProperty("person")
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+	
+	@JsonProperty("server")
 	public Server getServer() {
 		return server;
 	}
+	
+	@JsonProperty("server")
 	public void setServer(Server server) {
 		this.server = server;
 	}
-	*/
+	
 	
 	@JsonProperty("fingerprint")
 	public String getFingerprint() {
