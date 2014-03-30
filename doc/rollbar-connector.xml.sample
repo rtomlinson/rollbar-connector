@@ -1,3 +1,5 @@
 <!-- BEGIN_INCLUDE(rollbar:message-item) -->
-    <rollbar:message-item messageContent="#[payload]" />
+    <rollbar:message-item>
+    	<rollbar:message body="#[payload]"/>
+    </rollbar:message-item>
 <!-- END_INCLUDE(rollbar:message-item) -->

@@ -12,7 +12,9 @@
     <rollbar:config accessToken="accesstoken" environment="env" />
 
     <flow name="testFlow">
-        <rollbar:message-item messageContent="Test message"/>
+        <rollbar:message-item>
+        	<rollbar:message body="wibble"/>
+        </rollbar:message-item>
     </flow>
 
 </mule>
