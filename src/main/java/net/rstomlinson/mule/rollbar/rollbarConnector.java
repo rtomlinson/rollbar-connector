@@ -26,7 +26,8 @@ import com.sun.jersey.api.client.WebResource;
  *
  * @author Richard Tomlinson
  */
-@Connector(name="rollbar", schemaVersion="1.0-SNAPSHOT", friendlyName="Rollbar")
+@Connector(description="This connector allows for easy connection to the"
+		+ "Rollbar logging service http://rollbar.com", minMuleVersion="3.4.0", name="rollbar", schemaVersion="1.0-SNAPSHOT", friendlyName="Rollbar")
 public class rollbarConnector
 {
     /**
